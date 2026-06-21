@@ -3,3 +3,9 @@ body{
     grid-template-columns: 1fr 4fr;
 
 }
+#sidebar{
+    display:grid;
+    grid-template-rows: 10% 40% 50%;
+    
+
+}
