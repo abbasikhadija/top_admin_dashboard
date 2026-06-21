@@ -26,4 +26,7 @@ body{
     grid-template-rows: repeat(3, 1fr);
 
 }
-
+.icon{
+    width: 24px;
+    height: 24px;
+}
