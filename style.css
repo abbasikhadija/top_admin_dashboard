@@ -1,11 +1,27 @@
 body{
     display:grid;
     grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    width: 100vh;
 
 }
 #sidebar{
+    height: 100vh;
     display:grid;
     grid-template-rows: 10% 40% 50%;
-    
 
+
+
+}   
+#dashboard{
+    grid-row:1/2;
+    
+}
+#navigation{
+    grid-row:2/3;
+   
+}
+#personal_brand{
+    grid-row:3/4;
+    
 }
