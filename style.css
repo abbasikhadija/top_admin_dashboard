@@ -2,7 +2,7 @@ body{
     display:grid;
     grid-template-columns: 1fr 4fr;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
 
 }
 #sidebar{
@@ -13,15 +13,3 @@ body{
 
 
 }   
-#dashboard{
-    grid-row:1/2;
-    
-}
-#navigation{
-    grid-row:2/3;
-   
-}
-#personal_brand{
-    grid-row:3/4;
-    
-}
