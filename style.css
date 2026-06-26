@@ -30,3 +30,19 @@ body{
     width: 24px;
     height: 24px;
 }
+.card{
+    display: grid;
+    grid-template-rows:4fr 1fr;
+}
+#extra_content{
+    display:grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.lower{
+    display:grid;
+    grid-template-columns: 60% 40%;
+}
+.upper{
+    display:grid;
+    grid-template-columns: 60% 40%;
+}
