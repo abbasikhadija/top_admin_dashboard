@@ -22,16 +22,16 @@
     --xs: .25rem;
     --sm: .5rem;
     --md: 1rem;
-    --lg: 1.5rem;
-    --xl: 2rem;
+   --lg:1rem;
+    --xl:1.5rem;
 
     /* Radius */
     --radius: 12px;
 }
 body{
     display:grid;
-    grid-template-columns: 1fr 4fr;
-    height: 100vh;
+    grid-template-columns: 260px 4fr;
+    min-height: 100vh;
     
     margin:0;
    
@@ -40,22 +40,38 @@ body{
     font-family:system-ui,sans-serif;
 
 }
+#dashboard{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    font-size:1.7rem;
+    font-weight:700;
+
+    margin-bottom:3rem;
+}
+
+.dashboard_icon{
+    width:42px;
+    height:42px;
+}
 #sidebar{
-    height: 100vh;
-    display:grid;
-    grid-template-rows:auto 1fr auto;
+    display:flex;
+    flex-direction:column;
+
+    height:100vh;
+    padding:var(--sm);
+
     background:var(--sidebar);
     color:var(--white);
 
-    padding:var(--xl);
+    position:sticky;
+    top:0;
+}
 
-    
-    
-    gap:var(--xl);
-
-
-
-}   
+#personal_brand{
+    margin-top:auto;
+}
 #main_content
 {
     display:grid;
@@ -70,7 +86,7 @@ body{
 #cards_container{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows:auto;
     gap:var(--xl);
 
 }
@@ -79,8 +95,11 @@ body{
     height: 22px;
 }
 .card{
-    display: grid;
-    grid-template-rows:1fr auto;
+     display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    min-height:210px;
    
     background:var(--surface);
 
@@ -91,7 +110,7 @@ body{
     padding:var(--lg);
 
     
-
+    
     box-shadow:var(--shadow);
 }
 
@@ -103,16 +122,22 @@ body{
 .lower,
 .upper{
     display:grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 1fr auto;
     align-items:center;
+    
 }
 .icon_{
     display:grid;
     grid-template-columns:30px 1fr;
     align-items: center;
-    gap:var(--md);
+    
 
     cursor:pointer;
+    
+    gap:16px;
+    padding:10px 0;
+
+    font-weight:600;
 }
 .icon_con{
     display:flex;
@@ -125,12 +150,13 @@ body{
 }   
 .trending {
     display:grid;
-    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(4,25%);
 }
 #navigation,
 #personal_brand{
     display:grid;
-    gap:var(--lg);
+    gap:1.5rem;
+
 }
 #header{background:var(--surface);
 
@@ -140,6 +166,59 @@ body{
 
     display:grid;
     gap:var(--lg);
+    
+    background:white;
+    
+}
+.search_area{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.search_area input{
+    width:100%;
+    max-width:700px;
+
+    padding:.7rem 1rem;
+
+    border:none;
+    outline:none;
+
+    border-radius:999px;
+
+    background:#e8edf4;
+
+    font-size:1rem;
+}
+.profile_small{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.greeting{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.hello{
+    margin:0;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.greeting h2{
+    margin:.2rem 0 0;
+}
+.dp_small{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.dp_big{
+    width:70px;
+    height:70px;
+    border-radius:50%;
 }
 .project_heading{
     font-size:1.2rem;
@@ -193,4 +272,61 @@ body{
     margin: 2px 0 0;
     color: var(--text-light);
     font-size: 0.9rem;
+}
+.btns{
+    display:flex;
+    justify-content:flex-end;
+    gap:1rem;
+}
+
+.btns button{
+    background:var(--primary);
+    color:white;
+
+    border:none;
+    border-radius:999px;
+
+    padding:.8rem 2rem;
+
+    font-size:.95rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.btns button:hover{
+    background:var(--primary-light);
+    transform:translateY(-2px);
+}
+.announ_h{
+    font-weight:700;
+}
+.projects_section,
+#extra_content > div{
+    display:grid;
+    gap:.75rem;
+}
+h3{
+    margin:0;
+    font-size:1.2rem;
+    font-weight:700;
+}
+#navigation{
+    margin-bottom:3rem;
+}
+.announ{
+    padding:1rem 0;
+}
+
+.announ:not(:last-child){
+    border-bottom:1px solid var(--border);
+}
+.announ{
+    padding:1rem 0;
+}
+
+.announ:not(:last-child){
+    border-bottom:1px solid var(--border);
 }
